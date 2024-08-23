@@ -1,0 +1,72 @@
+   /* <通用區> */
+  .pageTitle {
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .logIn{
+    position: absolute;
+    padding:3px;
+    right: 3px;
+    bottom: 5px;
+    font-size: 12px;
+    font-weight:bolder;
+    color: white;
+    background-color:rgb(25, 128, 85);
+    box-shadow: 5px 5px 5px rgb(14, 129, 85);
+    
+  }
+  .logIn:hover{
+    background-color:rgb(118, 151, 114) ;
+    color: black;
+  }
+  .nav-item{
+    width:max-content ;
+  }
+
+  .nav-link{
+    font-size: 15px;
+    font-weight: 1000;
+  }
+
+  .nav-link:hover{
+    font-size: 15px;
+    font-weight: 1000;
+    filter: drop-shadow(2px 2px 20px rgb(51, 95, 51));
+    box-shadow: 1px 1px 10px rgb(51, 95, 51);
+    border-radius:10px;
+  }
+
+  .active{
+    box-shadow: 1px 1px 3px rgb(51, 95, 51);
+    border-radius:10px;
+  }
+
+  .footer{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 80px;
+  }
+  
+  .fixed-sidebar {
+    position: sticky;
+    top: 80px;
+    left: 0;
+    height: calc(100vh - 80px); 
+    overflow-y: auto;
+    background-color: #e7eaee; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    border-radius: 10px;
+  }
+
+  .left-aligned-indent {
+    text-align: left; 
+    text-indent: 2em; 
+    max-width: 400px;
+  }
+  
+ 
+  

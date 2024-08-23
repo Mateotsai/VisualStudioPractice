@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    position: relative;
+    padding: 0;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .numbertext {
+    color: #faf7f7;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 40px; 
+
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 20%;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  /* Google Map */
+  gmp-map {
+    height: 200px;
+  }
+
+  .mapPark{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    border-bottom: 2px dashed rgb(180, 178, 178);
+    padding: 10px 10px 30px 10px;
+  }
+
+  .media-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .selected{
+    box-shadow: 5px 5px 5px rgb(14, 129, 85);
+    }
+
+
+  /* 通用CSS */
+  .h-5word{
+    font-weight: bolder;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .a-word{
+    background-color: rgb(42, 41, 41);
+    color: aliceblue;
+    padding: 3px;
+    border-radius: 10px 3px 10px 3px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .a-word:active{
+    box-shadow: 5px 5px 5px rgb(14, 129, 85);
+  }
+
+  .a-word:hover{
+    background-color: rgb(6, 129, 80);
+  }
+
+  .h-5word2{
+    font-weight: bolder;
+    font-size: 30px;
+    padding-top: 10px;
+    padding: 10px,0, 0, 0;
+    margin: 0;
+  }
+
+  .a-word2{
+    background-color: rgb(42, 41, 41);
+    color: aliceblue;
+    padding: 1px;
+    border-radius: 20px 3px 20px 3px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+  }
+

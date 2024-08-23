@@ -3,8 +3,9 @@ img{
 }
 
 .form{
-    box-shadow:15px 15px 15px 15px inset #ccc;
+    box-shadow:15px 15px 15px 15px inset #e2e2e2;
     width:fit-content;
+    background-color: gray;
 }
 
 input{
@@ -15,4 +16,50 @@ input{
     border-radius: 30px;
     display:block;
     margin-bottom: 30px;
+    display:block;
+    margin-top: 30px;
+    outline:none;
+    font-size: 18px;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    border:none;
+    box-shadow: 6px 6px 6px 6px rgb(172, 222, 255 ,0.445) inset;
+    background-color:rgb(66, 181, 207);
+    padding: 15px 30px;
+    border-radius: 30px;
+    display:block;
+    margin-bottom: 30px;
+    display:block;
+    margin-top: 30px;
+    outline:none;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+}
+
+button:hover{
+    background-color:rgb(51, 56, 207);
+}
+
+p{
+    font-size: 1.3em;
+    font-weight: bold;
+
+}
+
+a{
+    color:darkblue;
+    font-size: 1.2em;
+    transition: .25s;
+    text-decoration: underline;
+}
+
+a:hover{
+    color:rgb(128, 128, 237);
+    font-size: 1.5em;
 }
