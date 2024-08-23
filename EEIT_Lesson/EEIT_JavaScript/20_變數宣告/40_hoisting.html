@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>Hoisting is JavaScript's default behavior of moving declarations to the top.</h4>
+    <p>JavaScript Hoisting：<a href="https://www.w3schools.com/js/js_hoisting.asp">https://www.w3schools.com/js/js_hoisting.asp</a></p>
+
+    <pre>
+        訊息選項：
+        (A). ReferenceError: 變數名稱 is not defined
+        (B). ReferenceError: Cannot access 變數名稱 before initialization 
+        (C). 主控台顯示: undefined 
+        (D). 主控台顯示: 指定數值 
+    </pre>
+
+    <script>
+
+        // 10. 測試變數的宣告和使用
+
+        //11. console.log(x);
+        // 請試著說明為什麼: 沒有先宣告X
+        // 說明: (A). ReferenceError: 變數名稱 is not defined
+        //  console.log(x); //ReferenceError: x is not defined
+
+         
+        // 12. 
+        // var y;
+        // console.log(y);
+        // 請試著說明為什麼: (C). 主控台顯示: undefined 
+        // 說明: 變數y沒有被附值
+
+        // var y;
+        // console.log(y);  //undefined
+
+        // 13. 
+        // console.log(z);
+        // var z = 20; //undefined
+        // 請試著說明為什麼:(C). 主控台顯示: undefined 
+        // 說明: 宣告不被順序影響，附值宣告 要在前面
+        上述那段等同於下面程式碼
+        // var z;
+        // console.log(z);
+        // z = 20;
+ 
+    </script>
+</body>
+
+</html>

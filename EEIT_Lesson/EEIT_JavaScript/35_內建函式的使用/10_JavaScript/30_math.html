@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Math Object</h4>
+    <p><a href="https://www.w3schools.com/js/js_math.asp">https://www.w3schools.com/js/js_math.asp</a></p>
+
+    <script>
+        
+        // 取亂數
+        console.log(`隨機取亂數: ${Math.random()}`); //0(包含) ~1(不包含)
+        
+        // 小練習：透過 Math.random() 取得 0-5 之間的整數亂數
+        let random5 = Math.random() * 6;
+        console.log(`0~5之間的隨機小數亂數: ${random5}`);
+        console.log(`0~5之間的整數亂數: ${Math.floor(random5)}`);
+
+        // 小練習：透過 Math.random() 取得 2-5 之間的整數亂數
+        let random3 = Math.random() *4;
+        console.log(`2~5之間的整數亂數: ${Math.floor(random3) + 2}`);
+
+        function randomX(x , y){
+            return Math.floor(Math.random() * (y - 1)+ x);
+        }
+
+        console.log(randomX(4,123));
+
+    </script>
+
+</body>
+
+</html>

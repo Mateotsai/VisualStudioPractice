@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="blue2"></p>
+<p id="blue3"></p>
+<p id="purple1"></p>
+<p id="purple2"></p>
+<p id="purple3"></p>
+<p id="gold1"></p>
+<p id="gold2"></p>
+<p id="gold3"></p>
+</body>
+<script>
+
+function magic(a1,a2,a3,a4,a5,a6,a7,a8){
+
+let b1 = a1 % 3;
+let b2 = a2 % 3 + Math.floor(a1 / 3);
+let b3 = a3 % 3 + Math.floor(b2 / 3);
+let b4 = a4 % 3 + Math.floor(b3 / 3);
+let b5 = a5 % 3 + Math.floor(b4 / 3);
+let b6 = a6 % 3 + Math.floor(b5 / 3);
+let b7 = a7 % 3 + Math.floor(b6 / 3);
+let b8 = a8 % 3 + Math.floor(b7 / 3);
+return [b1, b2, b3, b4, b5, b6, b7, b8];
+
+}
+
+let results = magic(12, 6, 0, 0, 0, 0, 0, 0)
+let b1 = results[0];
+let b2 = results[1];
+let b3 = results[2];
+let b4 = results[3];
+let b5 = results[4];
+let b6 = results[5];
+let b7 = results[6];
+let b8 = results[7];
+document.getElementById("blue2").innerText = `第一隊剩餘 ${b1}位`;
+document.getElementById("blue3").innerText = `第一隊剩餘 ${b2}位`;
+document.getElementById("purple1").innerText = `第一隊剩餘 ${b3}位`;
+document.getElementById("purple2").innerText = `第一隊剩餘 ${b4}位`;
+document.getElementById("purple3").innerText = `第一隊剩餘 ${b5}位`;
+document.getElementById("gold1").innerText = `第一隊剩餘 ${b6}位`;
+document.getElementById("gold2").innerText = `第一隊剩餘 ${b7}位`;
+document.getElementById("gold3").innerText = `第一隊剩餘 ${b8}位`;
+
+console.log(results);
+
+
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a href="https://getbootstrap.com/docs/5.2/utilities/flex/">https://getbootstrap.com/docs/5.2/utilities/flex/</a></p>
+        <h4>Bootstrap Flex</h4>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_flex.php">https://www.w3schools.com/bootstrap5/bootstrap_flex.php</a></p>
+        <hr>
+        <!-- 範本 -->
+        <div class="p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+
+        <h1>比較d-flex和d-inline-flex的差異，仔細看dog和cat的位置</h1>
+        <h5>d-flex = display-flex</h5>
+        dog
+        <div class=" d-flex p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        cat
+        <hr>
+        <h5>d-inline-flex</h5>
+        dog
+        <div class=" d-inline-flex p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        cat
+        <hr>
+
+        <h1>比較 .flex-nowrap 和 .flex-wrap 的差異</h1>
+        <h5>flex-nowrap，不換行，是預設值，要換行要另外設定</h5>
+        <div class="d-flex flex-nowrap p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+        <h5>flex-wrap，換行</h5>
+        <div class="d-flex flex-wrap p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+        </div>
+        <hr>
+        <h1>.flex-grow-0 和 .flex-grow-1 有什麼差異？* 需放置在 .d-flex 底下的元素中</h1>
+        <h5>.flex-grow-0代表false不參與空間配置，-1代表true參與填滿剩下空間</h5>
+        <div class="d-flex p-3 bg-secondary">
+            <div class="p-2 bg-warning flex-grow-1">item a</div>
+            <div class="p-2 bg-info flex-grow-0">item b</div>
+            <div class="p-2 bg-success flex-grow-1">item c</div>
+        </div>
+        <hr>
+
+
+        <h1>透過 .order-{0~9} 改變元素順序</h1>
+        <div class="d-flex p-3 bg-secondary">
+            <div class="order-3 p-2 bg-warning">item a</div>
+            <div class="order-1 p-2 bg-info">item b</div>
+            <div class="order-2 p-2 bg-success">item c</div>
+        </div>
+        <hr>
+      
+        <h1>.flex-row 和 .flex-row-reverse 的差異</h1>
+        <h5>flex-row 由左至右排列</h5>
+        <div class="d-flex flex-row p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+        <h5>flex-row-reverse 由右至左排列</h5>
+        <div class="d-flex flex-row-reverse p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+        
+        <h1>flex-column flex-column</h1>
+        <h5>flex-column 由上往下排列</h5>
+        <div class="d-flex flex-column p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+        <h5>flex-column-reverse 由下往上排列</h5>
+        <div class="d-flex flex-column-reverse p-3 bg-secondary">
+            <div class="p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+
+       
+        <h1> 該如何設置，可以讓外層容器佔瀏覽器寬度的一半</h1>
+        <h3>W-{ 25 | 50| 75 | 100}複習</h3>
+        <div class="d-inline-flex p-3 bg-success">
+            <div   div class="w-50 p-3 bg-secondary">
+                <div class="p-2 bg-warning">item a</div>
+                <div class="p-2 bg-info">item b</div>
+                <div class="p-2 bg-success">item c</div>
+            </div>
+            <div class="d-inline-flex w-50 p-3 bg-success">
+                <div class="p-2 bg-warning">item a</div>
+                <div class="p-2 bg-info">item b</div>
+                <div class="p-2 bg-success">item c</div>
+        </div>
+        </div>
+        <hr>
+        <h1>該如何設置，讓第一個元素靠左邊，其餘元素靠右邊排列？</h1>
+        <h3>me-auto </h3>
+        <div class="d-flex p-3 bg-secondary">
+            <div class="me-auto p-2 bg-warning">item a</div>
+            <div class="p-2 bg-info">item b</div>
+            <div class="p-2 bg-success">item c</div>
+        </div>
+        <hr>
+    
+
+    </div>
+</body>
+
+</html>

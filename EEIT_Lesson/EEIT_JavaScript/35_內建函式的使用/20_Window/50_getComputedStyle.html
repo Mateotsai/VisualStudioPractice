@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<style>
+ 
+</style>
+</head>
+
+<body>
+
+    <!-- 10. 畫面上設定一張圖片 -->
+    <img id="mySearch" src="../../img/find.png" style="top: 100px; position:relative ;">
+   
+    <script>
+       
+        // 20. 透過 元素.style.top 取得 樣式 top 值
+        var mySearchId = document.getElementById("mySearch");
+        // console.log(mySearchId);  
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性));
+        // console.log(mySearchId.style.top)
+        var res = window.getComputedStyle(mySearchId).getPropertyValue("top");
+        console.log(res);
+        
+        // 40. 觀察上述兩者差異
+ 
+
+        //透過window這個指令可以拿到預設值auto
+
+
+
+    </script>
+</body>
+
+</html>

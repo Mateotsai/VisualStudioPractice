@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10_form_elements</title>
+
+    <style>
+        body{
+            background-image:url(./s1200.png) ;
+            background-repeat: no-repeat;
+            backgroung-size: contain;
+            
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <p><a href="https://www.w3schools.com/html/html_forms.asp">HTML Forms</a></p>
+    <p><a href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</a></p>
+    <hr>
+ 
+    <!-- 試試看，<select>、<option> -->
+    <form action="" style="background-color: bisque;">
+    <span>手機使用調查，選擇手機型號:</span>
+    <select name="" id="">
+        
+        <option value="">IPhone13</option>
+        <option value="">IPhone14</option>
+        <option value="">Pixel 7 </option>
+        <option value="">Pixel 8 </option>
+
+    </select>
+    </form>
+<hr>
+    <!-- 使用<Label>將選單的可觸及範圍擴增 --> 
+    <form action="">
+        <label for="Phone">手機使用調查，選擇手機型號:</label>
+        <select name="" id="Phone">
+            
+            <option value="">IPhone13</option>
+            <option value="">IPhone14</option>
+            <option value="">Pixel 7 </option>
+            <option value="">Pixel 8 </option>
+    
+        </select>
+        </form>
+<hr>
+    <!-- 試試看，<select>、<optgroup>、<option> -->
+    <form action="" style="background-color: bisque;">
+        <label for="Phone2">手機使用調查，選擇手機型號:</label>
+        <select name="" id="Phone2">
+            
+            <optgroup label="Apple">
+                <option value="">IPhone13</option>
+                <option value="">IPhone14</option>
+                <option value="">IPhone15</option>
+                <option value="">IPhone16</option>
+
+            </optgroup>
+
+            <optgroup label="Pixel">
+                <option value="">Pixel 5 </option>
+                <option value="">Pixel 6 </option>
+                <option value="">Pixel 7 </option>
+                <option value="">Pixel 8 </option>
+            </optgroup>
+  
+        </select>
+        </form>   
+   
+    <hr>
+    <!-- 試試看，<datalist>、<option> -->
+        
+        <form action="">
+            <label for="food"> 請輸入喜歡的食物: </label>
+            <input type="text" id="food" list="foodList">
+            <datalist id="foodList">  
+                <option value="便當">   <!-- <option>在datalist裡面不需要結束標籤 -->
+                <option value="水餃">
+                <option value="麵包">
+            </datalist>
+
+
+        </form>
+        
+    <!-- 
+    下拉式選單    
+    -->
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10_img</title>
+</head>
+
+<body>
+
+    <!-- <img> 透過 src 屬性 設定圖片 -->
+
+    <img src="./puppy.jpg"; width="200px"; height="230px">
+
+
+    <!-- 10. 相對路徑 -->
+
+    <!-- 11. 圖片跟文件在同一層目錄 -->
+    <!-- 試試看，設定 puppy.jpg-->
+
+
+    <!-- 12. 圖片在下一層目錄 -->
+    <!-- 試試看，設定 media/cat.jpg、
+                     ./media/cat.jpg -->
+    <img src="media/cat.jpg"; width="200px"; height="230px">
+
+    <!-- 13. 圖片在上一層目錄 -->
+    <!-- 試試看，設定 ../10_HTML5/img/kitty.jpg-->
+    <img src="../10_HTML5/img/kitty.jpg"; width="200px"; height="230px">
+
+    <div style="background-color:aquamarine">
+    <p>相對路徑</p>
+    <ul>
+        <li>同一層找檔案<mark>./</mark></li>
+        <li>上一層找檔案<mark>./</mark></li>
+        <li>上上一層找檔案<mark>../../</mark></li>
+    </ul>
+    </div>
+
+
+    <!-- 20. 絕對路徑 -->
+    <!-- 試試看，設定 C:\\kitty.jpg-->
+    <!-- 提示: 點兩下直接開啟 .html 檔案 vs 透過 live server
+               觀察網址: file://  vs  live server: http:// -->
+    
+               
+    <div style="background-color: coral;">
+        <p>資安問題，網頁上的圖片盡量使用相對路徑，不要用"絕對路徑"</p>
+    </div>
+
+    <hr>
+    
+    <!-- 30. alt 屬性: 替代文字-->
+    <img src="kitty.jpg" alt="不見的圖源透過ALT顯現">
+
+    
+</body>
+
+</html>

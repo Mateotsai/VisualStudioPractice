@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_object_definition.asp">https://www.w3schools.com/js/js_object_definition.asp</a></p>
+
+    <script>
+        // 10. 使用 {} create object；object 可以包含屬性和方法
+        //     { key1:value1, key2:value2.. }
+        var apple = ""; // apple是字串
+        var apple = []; //apple是陣列
+        var apple = {}; //apple是物件，可以有屬性也可以有方法
+        console.log(apple);
+
+        var apple = { bee:'cat', butterfly:'dog' };
+        console.log(apple);
+        
+        //情境: 存放學生姓名、數學成績、國文成績
+        //用變數會需要打很多
+        // var studentA = 'John';
+        // var math = 100;
+        // vat chinede = 80;
+        //用陣列，取值時陣列只能用相應位置表示，一旦加入資料，後面會影響到其他程式取值，使用彈性差
+        var score = ["王小明", 100 , 80];
+        //用物件
+        var score = {name:"陳小華", scoreMath:99, scoreChinese:88};
+        
+
+        // 20. 透過 .  可以 取得 | 新增 object 的屬性
+        console.log(score); //取值
+        console.log(`姓名:${score.name}`); //姓名:陳小華
+        
+        score.scoreMath = 100; //改值
+        console.log(`數學成績:${score.scoreMath}`); //100
+
+        score.scoreEnglish = 85; //新增屬性
+        console.log(score); //85
+        console.log(`英文成績:${score.scoreEnglish}`);
+        
+        // 30. 透過 [] 可以 取得 | 新增 object 的屬性
+        console.log(score["scoreChinese"]); //中括號裡面記得用""包起來
+        score["scoreChinese"] = 75;
+        console.log(score[`中文成績: ${score.scoreChinese}`]);  //用中括號時裡面放字串
+        console.log(score.scoreChinese);
+
+        score["score.science"] = 60;
+        console.log(score);
+
+
+        //超過一位學生
+        var temp = [
+            {
+                name:"皮卡丘",
+                grades:{    
+                    math:90,
+                    chinese:88,
+                    english:75,
+                }
+            },
+            {
+                name:"胖丁",
+                grades:{
+                    math:92,
+                    chinese:90,
+                    english:65,
+                }
+            },
+            {
+                name:"小火龍",
+                grades:{
+                    math:100,
+                    chinese:98,
+                    english:95,
+                }
+            },
+        ]
+
+        // console.log(temp);
+        console.log(temp[1].grades.math); //多層提取方式
+
+
+        //function
+        function getGrade(stuName , subject){
+            for (let i = 0; i < temp.length; i++){
+                if(temp[i].name === stuName){
+                    return stuName + "的" + subject + "成績是" + temp[i].grades[subject];
+                }
+            }
+            return null;
+
+        }
+
+        
+        console.log(getGrade("胖丁","english"));
+
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

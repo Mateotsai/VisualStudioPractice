@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slot Machine Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.slot-machine {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.reel {
+    font-size: 50px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="slot-machine">
+        <div class="reel" id="reel1">🍒</div>
+        <div class="reel" id="reel2">🍋</div>
+        <div class="reel" id="reel3">🍉</div>
+    </div>
+    <button onclick="spin()">Spin</button>
+    <p id="result"></p>
+
+
+
+    <script>
+        function spin() {
+        const reel1 = document.getElementById("reel1");
+        const reel2 = document.getElementById("reel2");
+        const reel3 = document.getElementById("reel3");
+        const result = document.getElementById("result");
+
+        const symbols = ["🍒", "🍋", "🍉", "🍇", "🍊"];
+
+        reel1.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        reel2.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        reel3.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+        if (reel1.textContent === reel2.textContent && reel2.textContent === reel3.textContent) {
+            result.textContent = "Jackpot!";
+        } else {
+            result.textContent = "Try Again!";
+        }
+        }
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

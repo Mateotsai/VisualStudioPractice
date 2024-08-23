@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+   
+    <p style="margin: 1px;">請輸入頻道代碼: </p>
+    <div>
+        
+        <input type="text" id="searchInput" placeholder="20、65、66三台可查詢" >
+        <button onclick="performSearch()">查詢</button>  
+        <h1 id="replaceId">節目單</h1>
+
+    </div>
+   
+
+    <script>
+     
+    
+        function performSearch() {
+            const input = document.getElementById("searchInput");
+            const query = parseInt(input.value);
+            // console.log(query);
+        
+        let message = "";
+        switch (query) {
+            case 20 :
+            message = ('TCL旅遊生活頻道');
+                break;
+            case 65 :
+            message = ('HBO');
+                break;
+            case 66 :
+           message = ('東森洋片台');
+                break;
+            
+            default :
+            message = ('頻道尚未建立');
+                break;
+            
+            }
+            
+            // console.log("Message: ", message);
+            replaceId.innerText = message;
+   
+            // document.getElementById("replaceId").innerText = message;
+        
+    
+    }   
+           
+
+    </script>
+</body>
+
+</html>
+ 

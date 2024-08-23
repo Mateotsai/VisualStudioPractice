@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        //call by value(傳值);
+        //call by reference(傳址);
+        var x = 10;
+        var y = x;
+
+        console.log(x); //10
+        console.log(y); //10
+
+        x = 99;
+        console.log(x); //99
+        console.log(y); //10  call by Value，Y不會配合X更動
+
+        y = x;
+        console.log(y); //99
+
+
+        // 10. 宣告一個陣列 apple ，存放 1,2,3,4,5,6
+        var apple = [1,2,3,4,5,6];
+        // 20. 宣告另外一個陣列 bee，讓 bee = apple 
+        var bee = apple;
+        console.log(apple); //[1,2,3,4,5,6]
+        console.log(bee); //[1,2,3,4,5,6]
+        // 30. 取得 bee 第一個位置的值
+        console.log(bee[0]); //1
+        // 40. 修改 bee 第一個位置的值
+        bee[0] = 99;
+        console.log(bee); //[99, 2, 3, 4, 5, 6]
+
+        // 50. 將 apple  列印出來查看
+        console.log(apple); //[99, 2, 3, 4, 5, 6] call by reference apple配合bee更動
+        //因為陣列有可能資料庫量非常龐大，系統的保護機制，不直接複製同樣的值給另一個變數，而是提供他的儲存地址給他
+        //陣列、物件都是call by reference
+    </script>
+</body>
+
+</html>

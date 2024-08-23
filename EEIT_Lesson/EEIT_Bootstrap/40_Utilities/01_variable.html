@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <link rel="stylesheet" href="../_css/bootstrap-grid.css">
+    <style>
+        /* 創建變數使用:root  --代表變數 宣告變數並用var()給值 */
+        :root{
+            --myColor:lightgreen;
+        }
+        h1{
+            background-color: var(--myColor) ;
+        }
+        h2{
+            --cat:gray;
+            background-color: var(--cat);
+        }
+        h3{
+            background-color: var(--cat);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>apple</h1>
+    <h2>在H2內宣告--cat變數</h2>
+    <h3>--CAT在H2內宣告，在H3不能使用，除非宣告在:root</h3>
+
+
+
+    <script src="../_js/bootstrap.bundle.js"></script>
+</body>
+</html>

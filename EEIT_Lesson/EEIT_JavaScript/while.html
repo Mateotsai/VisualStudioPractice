@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        //網頁必須輸入通關密語1234才會停止
+
+
+
+        <script>
+            
+            方法A:用break跳出迴圈
+            // while(true){
+            //     let userInput = prompt("請輸入通關密碼: ")
+
+            //     if (userInput == "1234"){
+            //         break;
+            //     }
+            // }
+
+            //方法B:條件不成立，跳出迴圈
+            let flag = true;
+
+            while (flag){
+                let userInput = prompt("請輸入通關密碼:")
+                
+                if (userInput == "1234"){
+                    flag = false;
+                }
+        
+        }
+
+        </script>
+    </body>
+    </html>

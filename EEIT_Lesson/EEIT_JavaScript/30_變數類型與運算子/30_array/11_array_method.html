@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Array Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></p>
+
+    <script>
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 10. 陣列的取值和長度
+        console.log(weekList.length); //7
+        console.log(weekList[1]); //monday
+        
+
+        // 12. 陣列.toString()
+        console.log(weekList.toString()); //sunday,monday,tuesday,wednesday,thursday,friday,saturday
+
+        // 13. 陣列.join("#")
+        temp = weekList.join("#");
+        console.log(temp);//sunday#monday#tuesday#wednesday#thursday#friday#saturday
+        
+        // 14. 移除陣列中第一份資料 //.shift
+        res = weekList.shift();
+        console.log(res);
+        console.log(weekList); //monday,tuesday,wednesday,thursday,friday,saturday
+
+        // 15. 移除陣列中最後一份資料 //.pop
+        rres = weekList.pop();
+        console.log(rres);
+        console.log(weekList); //['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+
+        // 16. 想要加入資料到陣列中可以怎麼操作?
+        
+        //unshift 加到第一個
+        weekList.unshift("Sunday"); //如果需要移除並且取出那個值之後使用，另外再宣告一組變數給他
+        console.log(weekList);
+        
+
+        //push 加到最後一個
+        weekList.push("Saturday");
+        console.log(weekList);
+        
+        
+        //splice 指定加到哪個位置.splice(位置,移除幾個,"加上的內容");
+        weekList.splice(0,0,"星期天");
+        console.log(weekList); //['星期天', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        weekList.splice(8,0,"星期六");
+        console.log(weekList); // ['星期天', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', '星期六']
+
+
+        //變數名稱[索引]
+        weekList.push("祝大家周末愉快");
+        howManyDay = weekList.length;
+        console.log(howManyDay);
+        weekList[howManyDay] = "希望每天都是星期天";
+        console.log(weekList);
+
+        // 20. 二維陣列的長度
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        console.log(poker.length); //1
+        console.log(poker[0].length); //13 ，取出陣列中陣列的長度
+
+    </script>
+</body>
+
+</html>

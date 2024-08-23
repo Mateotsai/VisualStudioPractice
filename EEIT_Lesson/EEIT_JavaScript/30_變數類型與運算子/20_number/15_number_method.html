@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Number Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_number_methods.asp">https://www.w3schools.com/js/js_number_methods.asp</a></p>
+
+    <script>
+ 
+        // 10. 數值運算常見的錯誤
+        // NaN、Infinity、-Infinity
+        var apple = (10/0);
+        console.log(apple); //Infinity無限大，通常是不小心除0了
+        var apple1 = (-10 / 0);
+        console.log(apple1); //-Infinity負數的無限大，一種玄學的概念
+        var apple11 = 100/ "C";
+        console.log(apple11); //NaN = Not a Number  
+
+
+        // 20. 判斷數值 isNaN()
+
+        var temp = isNaN(apple);
+        console.log(temp); //false
+        console.log(isNaN(apple1)); //false
+        console.log(isNaN(apple11)); //true
+
+    
+        // 30. 把文字轉換為數值 parseInt()
+        var a1 = "11"+ 1; 
+        console.log(a1); //111 屬性是string
+        
+        var a2 = "11"- 1;
+        console.log(a2); //10  +加法時會認定為字串串接，-減法時直接判定為數字運算
+        
+        var a3 = parseInt("11") + 1;
+        console.log(a3); //12
+
+        var a4 = parseInt(a1) + 1;
+        console.log(a4); //112
+
+        // 35. 數值轉字串的方法 toString()
+        var b1 = 5;
+        console.log(typeof b1); //number
+        var b2 = b1.toString()
+        console.log(typeof b2); //string
+
+    </script>
+
+</body>
+
+</html>

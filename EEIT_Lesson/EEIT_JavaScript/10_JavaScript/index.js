@@ -1,0 +1,1 @@
+document.write("<h1>透過 script 標籤 引用JavaScript檔案</h1>");

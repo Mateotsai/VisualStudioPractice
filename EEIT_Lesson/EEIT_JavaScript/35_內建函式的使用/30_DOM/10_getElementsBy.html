@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript HTML DOM Elements</h4>
+    <p><a href="https://www.w3schools.com/js/js_htmldom_elements.asp">https://www.w3schools.com/js/js_htmldom_elements.asp</a></p>
+
+    <hr>
+
+    <h2 id="myApple">Apple</h2>
+    <h2 class="group1">Bee</h2>
+    <h2 class="group1">Cat</h2>
+    <h2>Dog</h2>
+    <h2>Egg</h2>
+
+    <script>
+ 
+        // 10. 透過 getElementsByTagName 取得所有 <h2> 元素
+            var h2o = document.getElementsByTagName("h2");
+            // console.log(h2o); //HTMLCollection(5) [h2#myApple, h2.group1, h2.group1, h2, h2, myApple: h2#myApple]
+        // 20. 透過 getElementsByClassName 取得擁有 class 類別的 元素
+            var myClass = document.getElementsByClassName("group1");
+            // console.log(myClass);    
+        // 30. 透過 getElementById 取得 id 為 myApple 的元素
+            var myName = document.getElementById("myApple");
+            // console.log(myName);
+            // myName.innerTexT = "皮卡丘";
+            myName.innerHTML = "<i>皮卡丘</i>";
+            // myClass.innerText = "<i>用innerHTML更改</i>" // 失敗
+            myClass[1].innerText = "<i>用innerHTML更改</i>" ;
+            h2o[4].innerText = ("取得HTML");
+
+
+        // 40. 透過 CSS Selectors 取得 標籤
+        //     querySelector()
+        //     querySelectorAll()
+
+        var res = document.querySelector("#myApple");
+        console.log(res);
+        
+        res2 = document.querySelectorAll(".group1");
+        console.log(res2);
+    </script>
+
+
+</body>
+
+</html>

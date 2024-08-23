@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p id = "timerId">Time status will be displayed here.</p>
+    <script>
+        
+       
+        
+        
+        
+        // 1. 取得系統現在時間(HH)
+        
+        let now = new Date();
+        let hours = now.getHours();
+        
+        function timeNow(){
+            let message = "";
+            
+            if (hours >=8 && hours < 12){
+            message = "上午課程時間";
+            }else if (hours >=12 && hours < 13){
+            message = "中午用餐時間";
+            }else if (hours >=13 && hours < 16){
+            message = "下午課程時間";
+            }else{
+            message = "非課程時間" ;          
+            }
+            
+            console.log(message);
+            return message;
+        }
+            let timing = document.getElementById("timerId");
+            timing.innerText = timeNow();
+
+        // console.log(hours);
+        // 2. 如果是 8點 ~ 11點，在主控台顯示上午課程
+        // 3. 如果是 12點，在主控台顯示中午用餐時間
+        // 4. 如果是 13點 ~ 16點，在主控台顯示下午課程
+        // 5. 其他的時段，在主控台顯示非課程時間
+        //-------------------------------------------
+        // 6. 透過三元運算子，判斷現在是 'AM' 還是 'PM'
+        let temp = (hours <12) ?  "AM" : "PM";
+        console.log(temp);
+
+        
+    </script>
+    
+</body>
+
+</html> 

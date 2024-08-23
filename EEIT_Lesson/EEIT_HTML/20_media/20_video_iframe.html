@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>20_vedio</title>
+</head>
+
+<body>    
+    <!-- 10. <video>: 嵌入影片檔案. 
+         ex: media/sayhi.mp4 -->
+             
+    <!-- controls: 控制面板-->
+    <!-- loop: 循環播放-->
+    <!-- muted: 設置靜音-->
+    <!-- poster: 封面圖片. ex: media/poster.png -->
+    
+    <H2>控制面板</H2>
+    <video src="./media/sayhi.mp4" width="320" height="180" controls loop muted poster="./media/poster.png"></video>
+    <br>
+    <H2>循環播放</H2>
+    <video src="./media/sayhi.mp4" width="320" height="180" loop></video>
+    <br>
+    <H2>設置靜音</H2>
+    <video src="./media/sayhi.mp4" width="320" height="180" muted></video>
+    <br>
+    <H2>封面圖片</H2>
+    <video src="./media/sayhi.mp4" width="320" height="180" poster="./media/poster.png"></video>
+    <br>
+    <!-- 20. 透過 <iframe> 嵌入 youtube 影片. 
+         ex: https://youtu.be/ewZ_YWbIWXI -->
+    <!-- 在 youtube 影片上點右鍵 -> 複製嵌入程式碼 -->
+    
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/ewZ_YWbIWXI" title="W3Schools HTML Tutorial 01 - Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+
+</body>
+
+</html>

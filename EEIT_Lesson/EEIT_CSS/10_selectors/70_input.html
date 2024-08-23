@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>70_input</title>
+    <style>
+        /* 10. 改變滑鼠經過 radio 的樣式 */
+        input[type="radio"] {
+            cursor: pointer;
+        }
+  
+        /* 20. :valid 驗證通過時的樣式設定 */
+        input[type="email"]:valid, input[type="text"]:valid {
+            background-color: rgb(211, 248, 236);
+        }
+ 
+        /* 21. :invalid 驗證不通過時的樣式設定 */
+        input[type="email"]:invalid, input[type="text"]:invalid {
+            background-color: rgb(172, 172, 172);
+        }
+
+        /* 若要簡化寫法，:valid :invalid這兩個不是共用的，用","隔開以後要記得各選擇器都要有 */
+        
+    </style>
+</head>
+
+<body>
+    <p><a href="https://www.w3schools.com/cssref/trysel.asp">Try CSS Selector</a></p>
+    <p><a href="https://caniuse.com/">Can I use..</a></p>
+    <p><a href="https://flukeout.github.io/">CSS Diner (選擇器的小遊戲)</a></p>
+    <hr>
+    <form>
+        <!-- 照上方CSS設定 -->
+        <!-- 10. 產生 單選按鈕元素 -->
+        <input type="radio">滑鼠選到圈圈時，會變成小手手
+        <hr>
+        <!-- 20. 產生 可以輸入 email 的方框 以及 -->
+        <!--     產生 可以輸入 文字  的方框，並限制只能輸入大小寫英文 以及 -->
+        <!--     產生 可以輸入 文字  的方框，並限制輸入身分證字號格式 -->
+        <br>
+        email: <input type="email">
+        <br>產生輸入email的方框，驗證通過變成淺綠色
+        <hr>
+        EnOnly: <input type="text" pattern="[A-Z,a-z]{0,}">
+        <br>限制英文大小寫的輸入框，不限制字數{0,}，限制字數{4,6}
+        <hr>
+        IDNum: <input type="text" pattern="[A-Z]{1}[0-9]{9}">
+        <br>限制身分證的輸入框A123456789
+
+    </form>
+</body>
+
+</html>

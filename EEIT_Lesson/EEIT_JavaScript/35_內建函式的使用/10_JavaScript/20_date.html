@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <h4>JavaScript Date Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_dates.asp">https://www.w3schools.com/js/js_dates.asp</a></p>
+    <h4>JavaScript Get Date Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_date_methods.asp">https://www.w3schools.com/js/js_date_methods.asp</a></p>
+    <hr>
+    <pre>
+    生成日期物件的方法：
+        new Date()
+        new Date(milliseconds)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    </pre>
+    
+    <script>
+        // 宣告一個時間物件
+        let now = new Date();
+        console.log(now); //Mon Jul 01 2024 11:50:00 GMT+0800 (台北標準時間)
+        // 取得年份
+        let year = now.getFullYear();
+        console.log(year);
+        // 取得月份 (請注意這裡)
+        let month = now.getMonth() + 1; //月份是從0開始的，所以要+1
+        console.log(month);
+        // 取得日期
+        let day = now.getDate();
+        console.log(day);
+        // 取得時鐘 
+        let hours = now.getHours();
+        console.log(hours);
+        // 取得分鐘
+        let minutes = now.getMinutes();
+        console.log(minutes);
+        // 取得秒鐘
+        let seconds = now.getSeconds();
+        console.log(seconds);
+        // 取得星期(請注意這裡)
+        let weekend = now.getDay();
+        console.log(weekend);
+        
+        let formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        console.log(formattedTime); // 輸出格式: YYYY-MM-DD HH:MM:SS
+        
+        // 若日期物件生成後，我們需要加一天 //取得今天再加一
+        now.setDate(now.getDate() + 1);
+        console.log(now);
+
+        // 若日期物件生成後，我們需要加一個月
+        now.setMonth(now.getMonth() + 1);
+        console.log(now);
+
+
+        // 小練習：如何透過日期的加減，取得這個月的最後一天?
+        //let now = new Date()
+        //let year = now.getFullYear();
+        // let month = now.getMonth();
+
+
+        //創造一個新的物件，將月份設為下一個月，日期設為0，下個月的第零天等於這個月的最後一天
+        let lastDayMonth = new Date(year, month+1, 0); //日期設為零，回退到前一個月一天
+        //取得這個月的最後一天的日期
+        let lastDay = lastDayMonth.getDate();
+         console.log(`這個月的最後一天是: ${lastDay}`);
+         console.log(`這個月的最後一天完整日期是: ${lastDayMonth}`);
+         
+        //方法B:
+        let last2 = new Date();
+        last2.setMonth(last2.getMonth()+1, 0)
+        console.log(last2);
+
+
+
+        // 小練習：宣告兩個日期物件，並指定日期後，進行日期相減
+        // millisecond = 86400000 = 1000*60*60*24
+
+        let timeDiff = lastDayMonth - now; // 將日期相減，返回的是毫秒數
+        // console.log(timeDif); //2454511633毫秒
+
+        let secondDiff = timeDiff / 1000; //把毫秒變成秒
+        let minuteDiff = secondDiff / 60;
+        let hourDiff = minuteDiff / 60;
+
+        let days = Math.floor(hourDiff / 24);
+        let hour = Math.floor(hourDiff % 24);
+        let minute = Math.floor(minuteDiff % 60);
+        let second = Math.floor(secondDiff % 60);
+
+        console.log(`兩個日期之間的差是: ${days} 天, ${hours} 小時, ${minutes} 分鐘, ${seconds} 秒`);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

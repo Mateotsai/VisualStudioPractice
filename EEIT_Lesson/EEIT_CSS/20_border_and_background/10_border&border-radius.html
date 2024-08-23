@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>border-radius</title>
+    <style>
+        div {
+            background-color: lightgreen;
+        }
+
+        .normalBorder {
+            /* 用border畫出四邊邊框 */
+            border:5px solid black;
+            /* 簡寫 border: width || style || color  */
+            
+        }
+
+        .leftBorder {
+            /* 用border畫出左邊框 */
+            border: solid rgb(199, 6, 6);
+            border-width: 5px 10px 15px 20px;
+            /* border-width 簡寫
+               一個值: 全部 border
+               兩個值: 上下 左右
+               三個值: 上 左右 下
+               四個值: 上 右 下 左 (順時針方向) */
+            
+        } 
+
+        .multiStyle {
+            /* 用border畫出四邊邊框，且四邊為不同style */
+            border:rgb(199, 6, 6) 5px;
+            border-style:dashed double solid dotted;
+            /* border-style 簡寫
+               一個值: 全部
+               兩個值: 上下 左右
+               三個值: 上 左右 下
+               四個值: 上 右 下 左 (順時針方向) */
+            
+        }
+
+        .radiusBorder {
+            /* 用border-radius改變四邊邊框的角(可以填入長度，或者百分比) */
+            border: rgb(199, 6, 6) solid 10px;
+            border-radius: 25px 50px 10px 15px ;
+            /* border-radius 簡寫
+               一個值: 全部
+               兩個值: 左上+右下 右上+左下
+               三個值: 左上 右上+左下 右下
+               四個值: 左上 右上 右下 左下 (順時針方向) */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="https://html-css-js.com/css/generator/border-radius/">Online Border Radius Generator</a></p>
+    <hr>
+    <div class="normalBorder">
+        <p>一般框線</p>
+    </div>
+    <br>
+    <div class="leftBorder">
+        <p>線條寬度的簡寫</p>
+    </div>
+    <br>
+    <div class="multiStyle">
+        <p>多樣線條的簡寫</p>
+    </div>
+    <br>
+    <div class="radiusBorder">
+        <p>圓角Radius的簡寫</p>
+    </div>
+</body>
+
+</html>

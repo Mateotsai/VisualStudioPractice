@@ -1,0 +1,28 @@
+.container 
+.container-{fluid |斷點}  
+
+.row
+.col
+.col-{斷點sm.md.lg.xl}-{1~12}
+.col-md-6
+.row row-cols-{數字1~6}
+
+.text-truncate文字溢出時用...表達
+.text-md-end
+.text-lowercase | .text-uppercase | .text-capitalize
+.fs-1 |  .fw-bold  | .fst-italic
+
+{ w | h } - {25 | 50 | 75 | 100 | autp}
+3w-md-{ 25|50|75|100|auto}
+.h-lg-{ 25|50|75|100|auto}
+{ p | M } - { t | b | s | e | x | y | 沒有值} - {斷點} - { 0~5 }
+.p-sm-{ 25|50|75|100|auto}
+.m-lg-{ 25|50|75|100|auto}
+
+.border
+.border-{top | bottom | start | end }
+.border-{ color }
+.border-{ 1~5 }
+
+.d-flex(這個超重要)
+.d-flex要設定在父元素，才會對子元素有作用

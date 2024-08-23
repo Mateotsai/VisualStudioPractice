@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Strings and Escape Character</h4>
+    <p><a href="https://www.w3schools.com/js/js_strings.asp">https://www.w3schools.com/js/js_strings.asp</a></p>
+
+    <script>
+
+        // 請觀察底下的變數透過等號設定值後，
+        // 透過變數名稱再次取出，會得到什麼結果?
+
+        // 1. var str = '"C"';
+        // var str = '"C"';
+        // console.log(str); //"C"
+
+        // 2. var str2 = "C:\temp";
+        var str2 = "C:\temp";
+        console.log(str2); //C:	emp  
+        //"\t"反斜線容易和後面的英文字母結合，這邊的\t代表Tab鍵
+        //正確寫法要刻意補上一個反斜線，讓兩個反斜線組合成一個反斜線，避免跟後面的字母融合
+        //"console.log(c:\\temp); = c:\temp"
+
+        let text = "we are the so-called "Vikings" from the north"
+        //解法有兩個
+        //1.外層用單引號 let text = 'we are the so-called "Vikings" from the north'
+        //2.內層雙引號補上反斜線 let text = "we are the so-called \"Vikings\" from the north"
+
+        // 3. var str3 = str4;
+        // var str3 = str4
+        // console.log(str3);  //ReferenceError: str4 is not defined
+
+    </script>
+</body>
+
+</html>

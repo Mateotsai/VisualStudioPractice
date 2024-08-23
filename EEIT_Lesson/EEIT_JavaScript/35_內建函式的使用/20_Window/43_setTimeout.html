@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 更新網址的寫法 1 -->
+    <!-- <meta http-equiv="refresh" content="0;url=https://one-piece.com/" /> -->
+</head>
+
+<body>
+
+    <h3>head有跳轉網址的方法</h3>
+
+    <h4>指定的秒數<span style="color:red;">後</span>，做指定的事情</h4>
+    <p><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp">setTimeout()</a></p>
+
+    <script>
+        function myChange(){
+            document.location.href = "http://www.google.com";
+
+        }
+
+        setTimeout(myChange, 2000);
+        // 更新網址的寫法 2 document.location.href
+         
+    </script>
+</body>
+
+</html>

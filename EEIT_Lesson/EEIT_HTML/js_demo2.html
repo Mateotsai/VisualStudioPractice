@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js demo2</title>
+</head>
+<body>
+    <h1>My first JavaScript</h1>
+    <p>試著按下按鈕，將下面的文字更改成其他文字</p>
+
+    <button type="button" onclick="myFunction()">點我!點我!</button>
+
+    <p id="demo">點完按鈕後這串文字將不同</p>
+
+    <!-- function 函式名稱() {要做的事情} -->
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+    </script>
+</body>
+</html>

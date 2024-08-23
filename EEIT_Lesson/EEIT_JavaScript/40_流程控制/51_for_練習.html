@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <p id="pSquare"></p>
+    <p id="pTriangle"></p>
+    <pre id="pTimes"></pre>
+
+    <script>
+        // 10. 使用 for 迴圈，列印出這個月份從1號到目前系統日
+        console.groupCollapsed("10.練習");
+        
+        const now = new Date();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+        
+        for(var i = 1; i <= day; i++){
+            console.log(`日期==> ${month}月${i}日`)
+        }
+
+        console.groupEnd();
+       
+        // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+       console.groupCollapsed("20.練習");
+       
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        for(k=0; k < weekList.length; k++){
+            console.log(weekList[k]);
+        }
+
+        console.groupEnd();
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        console.groupCollapsed("30.練習");
+        
+        let nn = 0;
+        
+        for(n = 1; n <= 10; n++){
+            nn = nn + n;
+        }
+            console.log(nn);
+        
+        console.groupEnd();
+
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // ****
+       
+
+        // let temp = "";
+        // for(s = 1; s <= 6; s++){
+        //    for(d = 1; d <= 4; d++){
+        //      temp += "*";
+        //    }
+        //    temp += "<br>";
+           
+        //     // temp += "****<br>";
+
+        // }
+        // document.getElementById("pSquare").innerHTML = temp;
+
+
+
+
+        // 50. 雙層迴圈 - 三角形 #pTriangle
+        // * 
+        // **  
+        // *** 
+        // **** 
+       
+    
+        
+        // let temp2 = "";
+        // for(r = 1; r <= 4; r++){
+        //     for(e = 1; e <= r; r++){
+        //         temp2 +="*";
+        //     }
+        //     temp2 += "<br>";
+        // }
+
+        // document.getElementById("pTriangle").innerHTML = temp2;
+
+        
+       
+
+        // 60. 列印九九乘法表 (tab為 "&#9;") + <pre> 標籤 #pTimes
+      
+        let temp3 = "";
+
+            for(t = 1; t < 10; t++){
+                for(y = 2; y < 10; y++){
+                    temp3 += (`${y} X ${t} = ${t * y}&#9;`);
+                }
+                    temp3 += "<br>";
+            }
+            
+        document.getElementById("pTimes").innerHTML = temp3;
+             // console.log(`${t} X ${y} = ${t * y}`);
+        
+    </script>
+</body>
+
+</html>

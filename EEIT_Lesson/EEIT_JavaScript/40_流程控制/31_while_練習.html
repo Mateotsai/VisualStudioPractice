@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+ 
+        
+            const correctPassword = "1234";
+            function checkPassword() {
+                let password = prompt("請輸入通關密碼:");
+                while (password !== correctPassword) {
+                    alert("密碼錯誤，請重新輸入。");
+                    password = prompt("請輸入通關密碼:");
+                }
+                alert("密碼正確，歡迎瀏覽！");
+            }
+
+    
+
+    </script>
+
+
+
+
+
+
+
+</head>
+
+<body onload="checkPassword()">
+    
+    <script>
+
+
+    </script>
+</body>
+ 
+</html>

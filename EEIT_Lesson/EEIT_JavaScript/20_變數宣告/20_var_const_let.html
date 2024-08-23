@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    
+    <h3>JavaScript Versions：<a href="https://www.w3schools.com/js/js_versions.asp">https://www.w3schools.com/js/js_versions.asp</a></h3>
+    <h3>ECMAScript 5 - 2009：<a href="https://www.w3schools.com/js/js_es5.asp">https://www.w3schools.com/js/js_es5.asp</a></h3>
+    <h3>ECMAScript 6 - 2015：<a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></h3>
+    
+    <h3>JavaScript Let：<a href="https://www.w3schools.com/js/js_let.asp">https://www.w3schools.com/js/js_let.asp</a></h3>
+    <h3>JavaScript Const：<a href="https://www.w3schools.com/js/js_const.asp">https://www.w3schools.com/js/js_const.asp</a></h3>
+    
+
+
+    
+    <h3>var、let、const 宣告變數的方法</h3>
+    <h3>const 變數宣告並給值後是否還能修改?</h3>
+    <h3>在 if 透過 var、let 宣告兩個變數，並觀察他們的作用域流程控制中</h3>
+
+   
+
+
+ 
+
+    <script>
+      var x = 10;
+      let y = 20;
+      const z= 30;
+
+      console.log(x);  //10
+      console.log(y);  //20
+      console.log(z);  //30
+    //在 if 透過 var、let 宣告兩個變數，並觀察他們的作用域流程控制中
+
+     console.clear;
+      
+
+      if (2 > 1){
+        
+        var cat = 50;
+        console.log(cat);
+      
+        let dog = 88;
+        console.log(dog);
+        }
+
+        console.log(cat); //50
+        console.log(dog); //dog is not defined
+
+        //cat.dog兩個變數應該都只有在if的區塊內被定義，較新的let可以排除，var則是無視此規則
+
+
+    </script>
+</body>
+
+</html>
